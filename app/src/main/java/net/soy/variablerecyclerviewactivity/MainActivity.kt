@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        mMyAdapter = MyAdapter(this)
+        mMyAdapter = MyAdapter(this, applicationContext)
         mLinearLayoutManager = LinearLayoutManager(this)
 
         rv_main.adapter = mMyAdapter
@@ -31,7 +31,19 @@ class MainActivity : AppCompatActivity() {
         textTwos.add(TextTwo("셋", 3))
         textTwos.add(TextTwo("넷", 4))
 
-        mMyAdapter?.setItems(textTwos, "제목")
+        mMyAdapter?.setItems(textTwos, "Variable ViewType RecyclerView")
     }
+
+    fun addData(){
+        val textTwos = ArrayList<TextTwo>()
+        textTwos.add(TextTwo("다섯", 5))
+        textTwos.add(TextTwo("여섯", 6))
+        textTwos.add(TextTwo("일곱", 7))
+        textTwos.add(TextTwo("여덟", 8))
+
+        mMyAdapter?.addItems(textTwos)
+    }
+
+
 
 }

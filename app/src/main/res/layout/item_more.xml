@@ -4,17 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="40dp"
+    android:background="#FFFFFF"
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/tv_one"
+        android:id="@+id/tv_more"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="Hello World!"
-        android:textColor="@color/colorPrimary"
-        app:layout_constraintRight_toRightOf="parent"
+        android:text="데이터 더보기"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

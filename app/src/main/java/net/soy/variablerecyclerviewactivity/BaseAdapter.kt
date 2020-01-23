@@ -37,6 +37,9 @@ abstract class BaseAdapter<T: BaseItem>(val context: Context): RecyclerView.Adap
         return if(itemCount > position) items?.get(position) else null
     }
 
+    fun addItem(item: T){
+        addItem(Integer.MAX_VALUE, item)
+    }
     fun addItem(getPosition: Int? = Int.MAX_VALUE, item: T){
         if(items == null) items = ArrayList()
         val position = min(getPosition?:0, items?.size?:0)
